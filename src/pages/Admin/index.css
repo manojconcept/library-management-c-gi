@@ -1,0 +1,9 @@
+.book-details {}
+
+.list-container {}
+
+
+.author-list tbody tr:last-child>*,
+.book-list tbody tr:last-child>* {
+  border: none !important;
+}

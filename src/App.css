@@ -1,0 +1,57 @@
+.navbar-brand {
+  color: #2f9e44 !important;
+}
+
+.navbar {
+  background-color: #b2f2bb !important;
+}
+
+.book {
+  background-color: rgb(228, 95, 0);
+  height: 300px;
+  border-radius: 2px 10px 10px 2px;
+}
+
+.book-inner-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.book-bind-mark {
+  border-right: 2px solid rgb(254, 106, 0);
+  width: 10%;
+  position: relative;
+}
+
+.book-bind-shadow {
+  border-right: 2px solid rgb(146, 61, 0);
+  height: 100%;
+  right: 0;
+}
+
+.book-front-detail {
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.book-front-title {
+  text-align: center;
+  background-color: #ffd43b;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+
+}
+
+.book-front-author,
+.book-front-isbn,
+.book-front-pub-date {
+  color: aliceblue;
+}
+
+.book-front-isbn,
+.book-front-pub-date {
+  font-size: .8rem;
+}
