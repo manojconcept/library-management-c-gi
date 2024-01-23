@@ -1,5 +1,4 @@
 import Book from '../Book'
-import Footer from '../Footer'
 function index() {
   return (
     <>
@@ -29,7 +28,6 @@ function index() {
           </ul>
         </nav>
       </div>
-      <Footer />
 
     </>
   )

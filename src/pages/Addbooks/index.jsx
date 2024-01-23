@@ -1,5 +1,3 @@
-import Footer from "../Footer";
-import Navbar from "../Navbar";
 import { PostBook } from "../../config/api/API"
 import { GlobalContext } from "../../config/Context";
 
@@ -22,11 +20,10 @@ function index() {
   }
   return (
     <>
-      <Navbar />
       <div className="container min-vh-100">
         <div className="row">
           <div className="col-8 offset-2">
-            <form onSubmit={(e) => handleForm(e)}>
+            <form   onSubmit={(e) => handleForm(e)} >
               <h1 className="my-5 text-center">Add Books</h1>
               <div className="form-floating mb-3">
                 <input
@@ -44,11 +41,11 @@ function index() {
               <div className="form-floating mb-3">
                 <select className="form-select" id="book-Author" name="Author" aria-label="Author name">
                   <option selected>Open this select menu</option>
-                  {authors.map((author, index) => {
+                  {/* {authors.map((author, index) => {
                     return (
                       <option key={index} value={author.id}>{author.name}</option>
                     )
-                  })}
+                  })} */}
                 </select>
 
                 <label htmlFor="book-Author">Author</label>
@@ -85,7 +82,7 @@ function index() {
           </div>
         </div>
       </div>
-      <Footer />
+     
     </>
   );
 }

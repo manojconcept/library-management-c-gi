@@ -1,16 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GlobalContext } from "../config/Context";
 
 function Navbar() {
-  const { isAuthenticated, setIsAuthenticated } = GlobalContext();
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    console.log("logout")
-    setIsAuthenticated(false)
-    navigate("/admin")
-  }
-  return (
+  const { isAuthenticated, navhandleLogout } = GlobalContext();
 
+ 
+  return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <Link className="navbar-brand" to={"/"}><b>LIBRARY MANAGEMENT</b></Link>
@@ -19,18 +14,19 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="me-auto">
-
           </div>
           <div className='d-flex'>
+          <Link to={"/admin"} className="btn btn-warning" type="submit">Admin Dashboard</Link> 
             {
-              isAuthenticated ? <><Link to={"/admin"} className="btn btn-warning" type="submit">Admin Dashboard</Link> <button className="btn btn-warning ms-2" href="#" title="logout" onClick={() => handleLogout()}>Logout</button></> :
-                <Link to={"/admin"} className="btn btn-warning" type="submit">Admin Dashboard</Link>
+              isAuthenticated ? 
+              <button className="btn btn-warning ms-2"  title="logout" onClick={() => navhandleLogout()}>Logout</button>
+              :
+              null
             }
           </div>
         </div>
       </div>
     </nav>
-
   )
 }
 

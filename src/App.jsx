@@ -8,6 +8,7 @@ import Addauthors from "./pages/Addauthors"
 import Login from "./pages/Login";
 import ContextWrapper, { GlobalContext } from "./config/Context";
 import Navbar from "./pages/Navbar";
+import Footer from "./pages/Footer";
 
 
 const App = () => {
@@ -18,9 +19,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={isAuthenticated ? <Dashboard /> : <Login />} />
-        <Route path="/admin/addbooks" element={isAuthenticated ? <Addbooks /> : <Login />} />
+        <Route path="/admin/addbooks" element={isAuthenticated ? <Login /> : <Addbooks />} />
         <Route path="/admin/addauthors" element={isAuthenticated ? <Addauthors /> : <Login />} />
       </Routes>
+      <Footer />
     </ContextWrapper>
   )
 }
