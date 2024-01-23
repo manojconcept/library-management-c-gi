@@ -1,10 +1,8 @@
-import Navbar from '../Navbar'
 import Book from '../Book'
 import Footer from '../Footer'
 function index() {
   return (
     <>
-      <Navbar />
       <div className='container my-5'>
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

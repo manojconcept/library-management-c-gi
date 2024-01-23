@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const SECRETKEY = "65a97dfb219bfa3718695969";
 const BOOKS_ENDPOINT = "mockapi.io/books";

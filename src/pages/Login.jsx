@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from './Navbar'
 import { GlobalContext } from '../config/Context';
-
 function Login() {
   const { isAuthenticated, setIsAuthenticated } = GlobalContext()
   const navigate = useNavigate();
@@ -16,10 +14,9 @@ function Login() {
       setIsAuthenticated(true)
     }
   }
-
+  
   return (
     <>
-      <Navbar />
       <div className='row'>
         <div className='col-xxl-4 offset-xxl-4 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3  col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-10 offset-1'>
           <div className="card mt-5">

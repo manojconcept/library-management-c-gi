@@ -1,5 +1,4 @@
 import Footer from "../Footer"
-import Navbar from "../Navbar"
 import { Link } from "react-router-dom";
 import "./index.css"
 import { Fragment} from "react";
@@ -10,7 +9,6 @@ function Dashboard() {
   const { authors, books } = GlobalContext()
   return (
     <>
-      <Navbar />
       <div className="container-fluid">
         <div className="container">
           <div className="p-3 mt-5 list-container border rounded">

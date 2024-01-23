@@ -6,7 +6,7 @@ const ContextWrapper = ({children}) =>{
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [authors, setAuthors] = useState(null)
   const [books, setBooks] = useState(null)
-  useEffect(() => { GetAuthors(setAuthors), GetBooks(setBooks) }, []);
+  useEffect(() => { GetAuthors(setAuthors), GetBooks(setBooks) }, [authors,books]);
 
   const FlowData = {
     isAuthenticated,

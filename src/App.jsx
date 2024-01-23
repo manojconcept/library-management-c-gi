@@ -6,13 +6,15 @@ import Dashboard from "./pages/Admin/";
 import Addbooks from "./pages/Addbooks"
 import Addauthors from "./pages/Addauthors"
 import Login from "./pages/Login";
-import ContextWrapper,{ GlobalContext } from "./config/Context";
+import ContextWrapper, { GlobalContext } from "./config/Context";
+import Navbar from "./pages/Navbar";
 
 
 const App = () => {
-  const {isAuthenticated} = GlobalContext;
+  const { isAuthenticated } = GlobalContext;
   return (
     <ContextWrapper>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={isAuthenticated ? <Dashboard /> : <Login />} />
