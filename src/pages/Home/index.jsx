@@ -1,5 +1,7 @@
 import Book from '../Book'
-function index() {
+const index =() => {
+  const {BASE_URL} = import.meta.env;
+    console.log();
   return (
     <>
       <div className='container my-5'>
@@ -15,7 +17,6 @@ function index() {
           <Book />
           <Book />
           <Book />
-
           <p className='text-center my-5'>No Books Available!</p>
         </div>
         <nav className="mt-5">

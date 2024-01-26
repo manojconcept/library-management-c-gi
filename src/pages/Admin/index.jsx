@@ -5,7 +5,6 @@ import { Fragment } from "react";
 import { GlobalContext } from "../../config/Context";
 
 const Dashboard = () => {
-
   const { authors, books } = GlobalContext()
   return (
     <>

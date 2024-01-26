@@ -1,16 +1,17 @@
 import { createContext,useContext,useState,useEffect } from "react"
-import { GetAuthors,GetBooks } from "./api/API";
 import { useNavigate } from "react-router-dom";
-
+// import {Get} from "./api/APImethods"
+import ApiMethods from "./api/APImethods";
 const Wrapper = createContext()
 const ContextWrapper = ({children}) =>{
-
+  const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
   const [authors, setAuthors] = useState(null)
   const [books, setBooks] = useState(null)
-  useEffect(() => { GetAuthors(setAuthors), GetBooks(setBooks) }, [authors,books]);
-  const navigate = useNavigate();
+  // const [data,setData] = useState();
+ useEffect(()=>{},[]);
+
+ console.log(ApiMethods());
 //------------> NavBar
   const navhandleLogout = () => {
     console.log("logout")
@@ -31,8 +32,6 @@ const ContextWrapper = ({children}) =>{
   const FlowData = {
     isAuthenticated,
     setIsAuthenticated,
-    GetAuthors,
-    GetBooks,
     authors,
     setAuthors,
     books,
