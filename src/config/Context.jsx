@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const Wrapper = createContext()
 const ContextWrapper = ({children}) =>{
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  
   const [authors, setAuthors] = useState(null)
   const [books, setBooks] = useState(null)
   useEffect(() => { GetAuthors(setAuthors), GetBooks(setBooks) }, [authors,books]);

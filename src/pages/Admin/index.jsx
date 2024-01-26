@@ -1,10 +1,10 @@
 import Footer from "../Footer"
 import { Link } from "react-router-dom";
 import "./index.css"
-import { Fragment} from "react";
+import { Fragment } from "react";
 import { GlobalContext } from "../../config/Context";
 
-function Dashboard() {
+const Dashboard = () => {
 
   const { authors, books } = GlobalContext()
   return (

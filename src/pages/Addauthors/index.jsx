@@ -1,28 +1,13 @@
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import { PostAuthor } from "../../config/api/API"
-
 function index() {
-  const handleForm = (e) => {
-    e.preventDefault();
-    const CuD = new Date();
-    const dob = new Date(e.target[1].value)
-    console.log(e.target[1].value)
-
-    PostAuthor({
-      createdAt: CuD.getTime(),
-      name: e.target[0].value,
-      dob: dob.getTime(),
-      bio: e.target[2].value,
-    })
-  }
   return (
     <>
       <Navbar />
       <div className="container min-vh-100">
         <div className="row">
           <div className="col-8 offset-2">
-            <form onSubmit={(e) => handleForm(e)}>
+            <form onSubmit={""}>
               <h1 className="my-5 text-center">Add Author</h1>
               <div className="form-floating mb-3">
                 <input

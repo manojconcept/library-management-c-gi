@@ -1,29 +1,13 @@
-import { PostBook } from "../../config/api/API"
-import { GlobalContext } from "../../config/Context";
 
 function index() {
 
-  const { GetAuthors, GetBooks, authors, setAuthors, books, setBooks } = GlobalContext()
 
-  const handleForm = (e) => {
-    e.preventDefault();
-    const CuD = new Date();
-    const pub = new Date(e.target[3].value);
-    console.log(pub)
-    PostBook({
-      createdAt: CuD.getTime(),
-      title: e.target[0].value,
-      author: e.target[1].value,
-      isbn: e.target[2].value,
-      pub_date: pub.getTime()
-    })
-  }
   return (
     <>
       <div className="container min-vh-100">
         <div className="row">
           <div className="col-8 offset-2">
-            <form   onSubmit={(e) => handleForm(e)} >
+            <form   onSubmit={""} >
               <h1 className="my-5 text-center">Add Books</h1>
               <div className="form-floating mb-3">
                 <input
